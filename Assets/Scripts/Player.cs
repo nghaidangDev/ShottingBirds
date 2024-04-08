@@ -72,7 +72,10 @@ public class Player : MonoBehaviour
                 //Nếu lấy đc hit và khoảng cách của hit đến mousePos <= 0.4 
                 if (hit.collider && Vector3.Distance((Vector2)hit.collider.transform.position, (Vector2)mousePos) <= 0.4f)
                 {
-                    Debug.Log(hit.collider.name);
+                    Bird bird = hit.collider.GetComponent<Bird>();
+
+                    if (bird)
+                        bird.Dead();
                 }
             }
         }
