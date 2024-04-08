@@ -79,5 +79,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        AudioController.Ins.PlaySound(AudioController.Ins.shoot);
     }
 }
