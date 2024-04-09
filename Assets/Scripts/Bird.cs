@@ -56,6 +56,8 @@ public class Bird : MonoBehaviour
     {
         isDead = true;
 
+        GameManager.Ins.BirdKilled++;
+
         Destroy(gameObject);
 
         if (deadVFX)
